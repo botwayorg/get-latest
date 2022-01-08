@@ -8,4 +8,4 @@ EXPOSE 8080
 
 ENTRYPOINT ["./get-latest"]
 
-RUN echo "enjoy"
+RUN echo "thanks for using `scmn-dev/get-latest`"
