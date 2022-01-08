@@ -34,7 +34,7 @@ func (r *Router) initRoutes() {
 
 	rootRouter.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("welcome, this is get-latest api, please use /:repo to get latest version"))
+		w.Write([]byte("welcome, this is get-latest api, please use /:user/:repo to get latest version"))
 	}).Methods(http.MethodGet)
 
 	rootRouter.HandleFunc("/{user}/{repo}", api.Latest()).Methods(http.MethodGet)
