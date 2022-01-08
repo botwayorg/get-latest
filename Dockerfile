@@ -7,3 +7,5 @@ COPY ./dist/get-latest .
 EXPOSE 8080
 
 ENTRYPOINT ["./get-latest"]
+
+RUN echo "enjoy"
