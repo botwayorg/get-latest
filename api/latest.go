@@ -6,20 +6,21 @@ import (
 
 	httpClient "github.com/abdfnx/resto/client"
 	"github.com/tidwall/gjson"
+	"github.com/gorilla/mux"
 )
 
-func Latest(repo string, token string) http.HandlerFunc {
+func Latest() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		url := "https://api.github.com/repos/" + repo + "/releases/latest"
+		vars := mux.Vars(r)
+		user := vars["user"]
+		repo := vars["repo"]
+
+		url := "https://api.github.com/repos/" + user + "/" + repo + "/releases/latest"
 
 		req, err := http.NewRequest("GET", url, nil)
 
 		if err != nil {
 			w.Write([]byte("Error creating request: " + err.Error()))
-		}
-
-		if token != "" {
-			req.Header.Add("Authorization", "Bearer " + token)
 		}
 
 		client := httpClient.HttpClient()

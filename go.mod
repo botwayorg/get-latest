@@ -5,6 +5,7 @@ go 1.17
 require (
 	github.com/abdfnx/resto v0.1.6
 	github.com/didip/tollbooth v4.0.2+incompatible
+	github.com/gorilla/mux v1.8.0
 	github.com/tidwall/gjson v1.12.1
 	github.com/urfave/negroni v1.0.0
 )
