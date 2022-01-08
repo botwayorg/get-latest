@@ -8,7 +8,7 @@
 
 go to **https://get-latest.secman.dev** and enter your repository name.
 
-![preview](https://user-images.githubusercontent.com/64256993/148659264-fb715223-17f2-4602-a9e9-9bbfd60f4df7.png)
+![preview](https://user-images.githubusercontent.com/64256993/148659957-57b9f6f4-fb8d-4e41-bd11-25098a428a4f.png)
 
 ### use api
 
@@ -21,6 +21,7 @@ import (
 
 func main() {
 	latest := api.LatestWithArgs("railwayapp/cli", "")
+	//                           ☝ repo name      ☝ github token
 	println(latest)
 }
 ```
