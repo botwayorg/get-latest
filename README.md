@@ -27,4 +27,4 @@ func main() {
 
 ## License
 
-MIT - [**License**](https://github.com/scmn-dev/get-latest/blob/main/LICENSE)
+Apache-2.0 License - [**License**](https://github.com/scmn-dev/get-latest/blob/main/LICENSE)
