@@ -37,6 +37,7 @@ func (r *Router) initRoutes() {
 		w.Write([]byte("welcome, this is get-latest api, please use /:user/:repo to get latest version"))
 	}).Methods(http.MethodGet)
 
+	rootRouter.HandleFunc("/{user}/{repo}", api.Latest()).Methods(http.MethodGet)
 	rootRouter.HandleFunc("/{user}/{repo}/{token}", api.Latest()).Methods(http.MethodGet)
 
 	n := negroni.Classic()
