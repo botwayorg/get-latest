@@ -14,10 +14,15 @@ func Latest() http.HandlerFunc {
 		vars := mux.Vars(r)
 		user := vars["user"]
 		repo := vars["repo"]
+		token := vars["token"]
 
 		url := "https://api.github.com/repos/" + user + "/" + repo + "/releases/latest"
 
 		req, err := http.NewRequest("GET", url, nil)
+
+		if token != "" {
+			req.Header.Add("Authorization", "token " + token)
+		}
 
 		if err != nil {
 			w.Write([]byte("Error creating request: " + err.Error()))
