@@ -4,6 +4,11 @@
 
 ## Usage
 
+### routes
+
+1. for public repos -> `/:user/:repo`
+2. for private repos -> `/:user/:repo/:token`
+
 ### from website
 
 go to **https://get-latest.secman.dev** and enter your repository name.
