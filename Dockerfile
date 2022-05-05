@@ -1,5 +1,7 @@
 FROM golang:alpine AS builder
 
+RUN mkdir app
+
 WORKDIR /app
 
 COPY . .
