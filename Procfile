@@ -1,1 +1,1 @@
-web: ./get-latest
+web: ./bin/get-latest
