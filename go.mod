@@ -1,6 +1,6 @@
 module github.com/scmn-dev/get-latest
 
-go 1.18
+go 1.17
 
 require (
 	github.com/abdfnx/resto v0.1.6
