@@ -38,6 +38,7 @@ func (r *Router) initRoutes() {
 	}).Methods(http.MethodGet)
 
 	rootRouter.HandleFunc("/{user}/{repo}", api.Latest()).Methods(http.MethodGet)
+	rootRouter.HandleFunc("/{user}/{repo}/{no-v}", api.Latest()).Methods(http.MethodGet)
 	rootRouter.HandleFunc("/{user}/{repo}/{token}", api.Latest()).Methods(http.MethodGet)
 
 	n := negroni.Classic()

@@ -1,11 +1,23 @@
-FROM alpine:latest
+FROM golang:alpine AS builder
 
 WORKDIR /app
 
-COPY ./dist/get-latest .
+COPY . .
+
+RUN go mod download
+
+RUN CGO_ENABLED=0 GOOS=linux go build -a -ldflags '-w -extldflags "-static"' ./app/get-latest
+
+FROM alpine:latest
+
+RUN apk add gcc g++ ca-certificates --no-cache
+
+WORKDIR /app
 
 EXPOSE 8080
 
-ENTRYPOINT ["./get-latest"]
+ENTRYPOINT ["/app/get-latest"]
 
-RUN echo "thanks for using scmn-dev/get-latest"
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+
+COPY --from=builder /app/get-latest /app/get-latest

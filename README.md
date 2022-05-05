@@ -11,9 +11,7 @@
 
 ### from website
 
-go to **https://get-latest.secman.dev** and enter your repository name.
-
-![preview](https://user-images.githubusercontent.com/64256993/148659957-57b9f6f4-fb8d-4e41-bd11-25098a428a4f.png)
+go to **https://get-latest.herokuapp.com** and enter your repository name.
 
 ### use api
 
@@ -25,8 +23,8 @@ import (
 )
 
 func main() {
-	latest := api.LatestWithArgs("railwayapp/cli", "")
-	//                           ☝ repo name      ☝ github token
+	latest := api.LatestWithArgs("railwayapp/cli", "GITHUB_TOKEN", false)
+	//                           ☝ repo name      ☝ github token  ☝ remove 'v' character from tag
 	println(latest)
 }
 ```

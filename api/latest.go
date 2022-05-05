@@ -3,10 +3,11 @@ package api
 import (
 	"io/ioutil"
 	"net/http"
+	"strings"
 
 	httpClient "github.com/abdfnx/resto/client"
-	"github.com/tidwall/gjson"
 	"github.com/gorilla/mux"
+	"github.com/tidwall/gjson"
 )
 
 func Latest() http.HandlerFunc {
@@ -15,6 +16,7 @@ func Latest() http.HandlerFunc {
 		user := vars["user"]
 		repo := vars["repo"]
 		token := vars["token"]
+		no_v := vars["no-v"]
 
 		url := "https://api.github.com/repos/" + user + "/" + repo + "/releases/latest"
 
@@ -46,7 +48,13 @@ func Latest() http.HandlerFunc {
 		tag := gjson.Get(string(b), "tag_name")
 
 		if tag.Exists() {
-			w.Write([]byte(tag.String()))
+			if no_v != "" {
+				// remove the 'v' char from the tag
+				tag_without_v := strings.Replace(tag.String(), "v", "", -1)
+				w.Write([]byte(tag_without_v))
+			} else {
+				w.Write([]byte(tag.String()))
+			}
 		} else {
 			w.Write([]byte("no releases found"))
 		}
