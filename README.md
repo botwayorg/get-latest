@@ -11,7 +11,7 @@
 
 ### from website
 
-visit [**get-latest website**](https://get-latest.herokuapp.com) and enter your repository name.
+visit [**get-latest website**](https://get-latest.onrender.com) and enter your repository name.
 
 ### use api
 
