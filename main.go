@@ -1,16 +1,16 @@
 package main
 
 import (
-	"os"
 	"log"
-	"time"
 	"net/http"
+	"os"
+	"time"
 
-	"github.com/scmn-dev/get-latest/router"
+	"github.com/botwayorg/get-latest/router"
 )
 
 func main() {
-	logger := log.New(os.Stdout, "[sm-get-latest] ", 0)
+	logger := log.New(os.Stdout, "[get-latest] ", 0)
 	port := os.Getenv("PORT")
 
 	if port == "" {

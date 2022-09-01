@@ -13,12 +13,14 @@ func LimitHandler() negroni.HandlerFunc {
 
 	return negroni.HandlerFunc(func(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
 		httpError := tollbooth.LimitByRequest(lmt, w, r)
+
 		if httpError != nil {
 			w.Header().Add("Content-Type", lmt.GetMessageContentType())
 			w.WriteHeader(httpError.StatusCode)
 			w.Write([]byte(httpError.Message))
 			return
 		}
+
 		next(w, r)
 	})
 }

@@ -6,7 +6,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/urfave/negroni"
 
-	"github.com/scmn-dev/get-latest/api"
+	"github.com/botwayorg/get-latest/api"
 )
 
 func New() *Router {
@@ -15,6 +15,7 @@ func New() *Router {
 	}
 
 	r.initRoutes()
+
 	return r
 }
 

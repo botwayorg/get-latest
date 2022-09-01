@@ -15,7 +15,7 @@ func LatestWithArgs(repo, token string, no_v bool) string {
 	req, err := http.NewRequest("GET", url, nil)
 
 	if token != "" {
-		req.Header.Add("Authorization", "token " + token)
+		req.Header.Add("Authorization", "token "+token)
 	}
 
 	if err != nil {

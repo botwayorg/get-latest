@@ -23,7 +23,7 @@ func Latest() http.HandlerFunc {
 		req, err := http.NewRequest("GET", url, nil)
 
 		if token != "" {
-			req.Header.Add("Authorization", "token " + token)
+			req.Header.Add("Authorization", "token "+token)
 		}
 
 		if err != nil {

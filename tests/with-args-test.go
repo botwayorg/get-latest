@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/scmn-dev/get-latest/api"
+	"github.com/botwayorg/get-latest/api"
 )
 
 func main() {

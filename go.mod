@@ -1,7 +1,6 @@
-module github.com/scmn-dev/get-latest
+module github.com/botwayorg/get-latest
 
-// +heroku goVersion go1.17
-go 1.17
+go 1.18
 
 require (
 	github.com/abdfnx/resto v0.1.6
@@ -15,5 +14,5 @@ require (
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.0 // indirect
-	golang.org/x/time v0.0.0-20211116232009-f0f3c7e86c11 // indirect
+	golang.org/x/time v0.0.0-20220722155302-e5dcc9cfc0b9 // indirect
 )

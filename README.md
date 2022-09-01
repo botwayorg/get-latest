@@ -19,7 +19,7 @@ visit [**get-latest website**](https://get-latest.herokuapp.com) and enter your 
 package main
 
 import (
-	"github.com/scmn-dev/get-latest/api"
+	"github.com/botwayorg/get-latest/api"
 )
 
 func main() {
@@ -31,4 +31,4 @@ func main() {
 
 ## License
 
-Apache-2.0 License - [**License**](https://github.com/scmn-dev/get-latest/blob/main/LICENSE)
+Apache-2.0 License - [**License**](https://github.com/botwayorg/get-latest/blob/main/LICENSE)
