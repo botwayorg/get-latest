@@ -13,6 +13,6 @@ require (
 require (
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/tidwall/match v1.1.1 // indirect
-	github.com/tidwall/pretty v1.2.0 // indirect
-	golang.org/x/time v0.0.0-20220722155302-e5dcc9cfc0b9 // indirect
+	github.com/tidwall/pretty v1.2.1 // indirect
+	golang.org/x/time v0.2.0 // indirect
 )
