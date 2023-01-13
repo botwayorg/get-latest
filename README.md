@@ -7,13 +7,13 @@
 ### routes
 
 1. for public repos -> `/:user/:repo`
-2. for private repos -> `/:user/:repo/:token`
+2. for private repos -> `/:user/:repo?token=TOKEN`
 
 ### from website
 
-visit [**get-latest website**](https://get-latest.onrender.com) and enter your repository name.
+visit [**get-latest website**](https://get-latest.deno.dev) and enter your repository name.
 
-### use api
+### use api (for golang)
 
 ```go
 package main
