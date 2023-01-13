@@ -26,5 +26,11 @@ export const handler = async (_req: Request, _ctx: HandlerContext) => {
 
   const release: Release = await resp.json();
 
-  return new Response(release.tag_name);
+  let tag = release.tag_name;
+
+  if (u.searchParams.get("no-v")) {
+    tag = tag.replace("v", "");
+  }
+
+  return new Response(tag);
 };
