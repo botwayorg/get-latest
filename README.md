@@ -12,8 +12,7 @@ visit [**get-latest website**](https://get-latest.deno.dev) and enter your repos
 
 1. for public repos -> `/:user/:repo`
 2. for private repos -> `/:user/:repo?token=TOKEN`
-3. you can add `?no-v` query var to receive release without `v` char
-
+3. you can add `?no-v=true` query var to receive release without `v` char
 
 ### use api (for golang)
 
