@@ -12,7 +12,7 @@ export default function App() {
         <link
           rel="icon"
           type="image/svg"
-          href="https://cdn-botway.deno.dev/icon.svg"
+          href="https://cdn-botway.deno.dev/simple/icon.svg"
         />
 
         <title>📡 Get Latest Release</title>
