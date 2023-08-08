@@ -24,7 +24,7 @@ import (
 )
 
 func main() {
-	latest := api.LatestWithArgs("railwayapp/cli", "GITHUB_TOKEN", false)
+	latest := api.LatestWithArgs("denoland/deno", "GITHUB_TOKEN", false)
 	//                           ☝ repo name      ☝ github token  ☝ remove 'v' character from tag
 	println(latest)
 }

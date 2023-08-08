@@ -5,6 +5,6 @@ import (
 )
 
 func main() {
-	latest := api.LatestWithArgs("railwayapp/cli", "", false)
+	latest := api.LatestWithArgs("denoland/deno", "", false)
 	println(latest)
 }
