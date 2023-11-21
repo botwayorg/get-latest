@@ -8,7 +8,7 @@ export default function App() {
         className="font-medium text-lg pt-3 text-white"
         style={{ fontFamily: "Farray" }}
       >
-        Welcome to Botway CDN 📦
+        Welcome to Get Latest API 🛰️
       </h3>
       <br />
       <p className="text-white text-sm" style={{ fontFamily: "Inter" }}>
@@ -41,7 +41,7 @@ export default function App() {
 
         <link rel="stylesheet" href="https://cdn-botway.deno.dev/main.css" />
 
-        <title>📡 Get The Latest Release</title>
+        <title>🛰️ Get The Latest Release</title>
       </Head>
 
       <body style={{ background: "#13111c" }}>
