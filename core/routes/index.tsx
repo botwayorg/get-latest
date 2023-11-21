@@ -8,7 +8,7 @@ export default function App() {
         className="font-medium text-lg pt-3 text-white"
         style={{ fontFamily: "Farray" }}
       >
-        Welcome to Get Latest API 🛰️
+        Get Latest API 🛰️
       </h3>
       <br />
       <p className="text-white text-sm" style={{ fontFamily: "Inter" }}>
