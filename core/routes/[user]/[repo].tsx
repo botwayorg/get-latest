@@ -17,7 +17,7 @@ export const handler = async (_req: Request, _ctx: HandlerContext) => {
           ? `token ${u.searchParams.get("token")}`
           : "",
       },
-    }
+    },
   );
 
   if (resp.status === 404) {

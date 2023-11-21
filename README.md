@@ -1,20 +1,35 @@
-# get-latest
+# Get Latest 🛰️
 
-> Get the latest repository version
+> Get the latest repository version. Written in Deno Fresh 🦕
 
-## Usage
-
-### from website
-
-visit [**get-latest website**](https://get-latest.deno.dev) and enter your repository name.
-
-#### routes
+## Routes
 
 1. for public repos -> `/:user/:repo`
 2. for private repos -> `/:user/:repo?token=TOKEN`
 3. you can add `?no-v=true` query var to receive release without `v` char
 
-### use api (for golang)
+## Usage
+
+### JS/TS
+
+```js
+fetch("https://get-latest.deno.dev/denoland/deno")
+  .then(res => res.text())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+```
+
+### Deno
+
+```ts
+const res = await fetch("https://get-latest.deno.dev/denoland/deno");
+
+const data = await res.text();
+
+console.log(data);
+```
+
+### Golang
 
 ```go
 package main
@@ -25,10 +40,12 @@ import (
 
 func main() {
 	latest := api.LatestWithArgs("denoland/deno", "GITHUB_TOKEN", false)
-	//                           ☝ repo name      ☝ github token  ☝ remove 'v' character from tag
+	//                           ☝ repo name     ☝ github token ☝ remove 'v' character from tag
 	println(latest)
 }
 ```
+
+> And of course you can use it with other languages 🤝
 
 ## License
 

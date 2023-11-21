@@ -1,7 +1,7 @@
 package api
 
 import (
-	"io/ioutil"
+	"io"
 	"net/http"
 	"strings"
 
@@ -23,6 +23,7 @@ func LatestWithArgs(repo, token string, no_v bool) string {
 	}
 
 	client := httpClient.HttpClient()
+
 	res, err := client.Do(req)
 
 	if err != nil {
@@ -31,7 +32,7 @@ func LatestWithArgs(repo, token string, no_v bool) string {
 
 	defer res.Body.Close()
 
-	b, err := ioutil.ReadAll(res.Body)
+	b, err := io.ReadAll(res.Body)
 
 	if err != nil {
 		return "Error sending request: " + err.Error()
@@ -43,6 +44,7 @@ func LatestWithArgs(repo, token string, no_v bool) string {
 		if no_v {
 			// remove the 'v' char from the tag
 			tag_without_v := strings.Replace(tag.String(), "v", "", -1)
+
 			return tag_without_v
 		} else {
 			return tag.String()
