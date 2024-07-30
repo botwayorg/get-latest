@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/abdfnx/resto v0.1.6
-	github.com/tidwall/gjson v1.17.1
+	github.com/tidwall/gjson v1.17.2
 )
 
 require (
